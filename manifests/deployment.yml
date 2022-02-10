@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ahmedkhamessilearnpusblishpackage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ahmedkhamessilearnpusblishpackage
+  template:
+    metadata:
+      labels:
+        app: ahmedkhamessilearnpusblishpackage 
+    spec:
+      containers:
+        - name: ahmedkhamessilearnpusblishpackage 
+          image: k8ssecurityacr.azurecr.io/ahmedkhamessilearnpusblishpackage
+          ports:
+          - containerPort: 80
